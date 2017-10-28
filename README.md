@@ -26,7 +26,7 @@ And the following options to the extended context menu
 * Notepad (Administrator)
 
 Prerequisites:
-* Place HxD [1] into %ProgramFiles(x86)%\HxD
+* Place HxD [1] into ```%ProgramFiles(x86)%\HxD```
 * Optionally install Notepad2-Mod [2] to have a proper Notepad
 
 
