@@ -15,3 +15,13 @@ There are two options:
 
 [1] Use for example Process Hacker with the TrustedInstaller plugin  
 [2] Run regedit via psexec: ```psexec.exe -s -i regedit.exe```
+
+
+## OpenWithHexeditorNotepad
+Adds the following options to the context menu
+* HexEditor
+* Notepad
+And the following options to the extended context menu
+* HexEditor (Administrator)
+* Notepad (Administrator)
+
