@@ -18,11 +18,11 @@ There are two options:
 
 
 ## OpenWithHexeditorNotepad
-Adds the following options to the context menu
+Adds the following options to the context menu:
 * HexEditor
 * Notepad
 
-And the following options to the extended context menu
+And the following options to the extended context menu:
 * HexEditor (Administrator)
 * Notepad (Administrator)
 
