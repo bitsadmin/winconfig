@@ -21,6 +21,7 @@ There are two options:
 Adds the following options to the context menu
 * HexEditor
 * Notepad
+
 And the following options to the extended context menu
 * HexEditor (Administrator)
 * Notepad (Administrator)
