@@ -7,7 +7,7 @@ Script to cleanup and tweak Windows for use by advanced users. Settings include:
 * Note that this script does not disable Windows 10 spying, use tools like O&O ShutUp10 [1] or Destroy-Windows-10-Spying [2]
 
 **Installation**  
-Simply run the CleanWindows.cmd script with elevated permissions.
+Simply run the CleanWindows.cmd script with elevated privileges.
 
 **Sample output**
 ```
@@ -109,6 +109,6 @@ The operation completed successfully.
 The operation completed successfully.
 ```
 
-
 [1] https://www.oo-software.com/shutup10/
+
 [2] https://github.com/Nummer/Destroy-Windows-10-Spying/
