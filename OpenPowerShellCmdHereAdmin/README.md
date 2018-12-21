@@ -22,7 +22,7 @@ Successfully tested on:
 * Windows 10 - 1809
 
 ### Legacy
-Simply import the .reg from the Windows 7 folder.
+Simply import the .reg from the Legacy folder.
 
 Successfully tested on:
 * Windows 7 SP1
