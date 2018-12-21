@@ -4,6 +4,7 @@ Adds the following options to the extended context menu:
 * Open command window here (Administrator)
 * Open PowerShell window here
 * Open PowerShell window here (Administrator)
+
 ![Tweaked context menu](https://raw.githubusercontent.com/bitsadmin/winconfig/master/OpenPowerShellCmdHereAdmin/cmd_ps_here.png "Context menu containing cmd.exe and PowerShell")
 
 ## Installation
