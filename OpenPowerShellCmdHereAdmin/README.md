@@ -2,15 +2,31 @@
 Adds the following options to the extended context menu:
 * Open command window here
 * Open command window here (Administrator)
-* Open powershell window here
-* Open powershell window here (Administrator)
+* Open PowerShell window here
+* Open PowerShell window here (Administrator)
+![Tweaked context menu](https://raw.githubusercontent.com/bitsadmin/winconfig/master/OpenPowerShellCmdHereAdmin/cmd_ps_here.png "Context menu containing cmd.exe and PowerShell")
 
-**Installation**  
-When simply imported, it will show an error because of the permissions set on the ```HKCR\Directory\shell\cmd``` key which needs to be updated in order to display an icon in the context menu.
+## Installation
+### Legacy
+Simply import the .reg from the Windows 7 folder.
+
+Succesfully tested on:
+* Windows 7 SP1
+* Windows 8.1 Update 1
+* Windows 10 - 1507 (RTM)
+
+### Windows 10
+When simply importing the .reg, it will return an error because of the permissions set on the `HKCR\[Directory|Directory\Background|Drive]\shell\[cmd|Powershell]` keys which need to be updated in order to hide the default open PowerShell/command window option in the context menu.
+
 There are two options:
-* Modify the permissions of the key so the user you are importing the .reg with has sufficient permissions to write;
-* Import the .reg as TrustedInstaller[1] or SYSTEM[2].
+* Modify the permissions of the key so the user you are using to import the .reg has sufficient permissions to write;
+* Import the .reg using regedit running with TrustedInstaller permissions [1].
+
+Succesfully tested on:
+* Windows Server 2016 - 1607
+* Windows 10 - 1709
+* Windows 10 - 1803
+* Windows 10 - 1809
 
 
-[1] Use for example Process Hacker with the TrustedInstaller plugin  
-[2] Run regedit via psexec: ```psexec.exe -s -i regedit.exe```
+[1] Use for example ExecTI from https://winaero.com/download.php?view.1991

@@ -1,7 +1,33 @@
 Windows Registry Editor Version 5.00
 
+; Author: Arris Huijgen (@_bitsadmin)
+; Website: https://github.com/bitsadmin/winconfig
+
+[HKEY_CLASSES_ROOT\Directory\shell\cmd]
+"ShowBasedOnVelocityId"=-
+"HideBasedOnVelocityId"=dword:00639bc8
+
+[HKEY_CLASSES_ROOT\Directory\shell\Powershell]
+"HideBasedOnVelocityId"=-
+"ShowBasedOnVelocityId"=dword:00639bc8
+
+[-HKEY_CLASSES_ROOT\Directory\shell\cmd2]
+
+[-HKEY_CLASSES_ROOT\Directory\shell\runas]
+
+[-HKEY_CLASSES_ROOT\Directory\shell\wpsh]
+
+[-HKEY_CLASSES_ROOT\Directory\shell\wpsh-elev]
+
 [HKEY_CLASSES_ROOT\Directory\Background\shell\cmd]
-"Icon"=-
+"ShowBasedOnVelocityId"=-
+"HideBasedOnVelocityId"=dword:00639bc8
+
+[HKEY_CLASSES_ROOT\Directory\Background\shell\Powershell]
+"HideBasedOnVelocityId"=-
+"ShowBasedOnVelocityId"=dword:00639bc8
+
+[-HKEY_CLASSES_ROOT\Directory\Background\shell\cmd2]
 
 [-HKEY_CLASSES_ROOT\Directory\Background\shell\runas]
 
@@ -10,20 +36,18 @@ Windows Registry Editor Version 5.00
 [-HKEY_CLASSES_ROOT\Directory\Background\shell\wpsh-elev]
 
 [HKEY_CLASSES_ROOT\Drive\shell\cmd]
-"Icon"=-
+"ShowBasedOnVelocityId"=-
+"HideBasedOnVelocityId"=dword:00639bc8
+
+[HKEY_CLASSES_ROOT\Drive\shell\Powershell]
+"HideBasedOnVelocityId"=-
+"ShowBasedOnVelocityId"=dword:00639bc8
+
+[-HKEY_CLASSES_ROOT\Drive\shell\cmd2]
 
 [-HKEY_CLASSES_ROOT\Drive\shell\runas]
 
 [-HKEY_CLASSES_ROOT\Drive\shell\wpsh]
 
 [-HKEY_CLASSES_ROOT\Drive\shell\wpsh-elev]
-
-[HKEY_CLASSES_ROOT\Directory\shell\cmd]
-"Icon"=-
-
-[-HKEY_CLASSES_ROOT\Directory\shell\runas]
-
-[-HKEY_CLASSES_ROOT\Directory\shell\wpsh]
-
-[-HKEY_CLASSES_ROOT\Directory\shell\wpsh-elev]
 

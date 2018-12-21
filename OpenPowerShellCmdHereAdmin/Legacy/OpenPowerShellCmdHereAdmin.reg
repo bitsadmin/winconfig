@@ -1,0 +1,104 @@
+Windows Registry Editor Version 5.00
+
+; Author: Arris Huijgen (@_bitsadmin)
+; Website: https://github.com/bitsadmin/winconfig
+
+; Directory
+[HKEY_CLASSES_ROOT\Directory\shell\cmd]
+"Icon"="cmd.exe"
+
+[HKEY_CLASSES_ROOT\Directory\shell\runas]
+@="Open command window here (Administrator)"
+"Extended"=""
+"HasLUAShield"=""
+"NoWorkingDirectory"=""
+"Icon"="cmd.exe"
+
+[HKEY_CLASSES_ROOT\Directory\shell\runas\command]
+@="cmd.exe /s /k pushd \"%V\""
+
+[HKEY_CLASSES_ROOT\Directory\shell\wpsh]
+@="Open PowerShell window here"
+"Extended"=""
+"NoWorkingDirectory"=""
+"Icon"="powershell.exe"
+
+[HKEY_CLASSES_ROOT\Directory\shell\wpsh\command]
+@="C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\powershell.exe -NoExit -NoProfile -Command \"Push-Location -literalPath '%V'\""
+
+[HKEY_CLASSES_ROOT\Directory\shell\wpsh-elev]
+@="Open PowerShell window here (Administrator)"
+"Extended"=""
+"NoWorkingDirectory"=""
+"Icon"="powershell.exe"
+"HasLUAShield"=""
+
+[HKEY_CLASSES_ROOT\Directory\shell\wpsh-elev\command]
+@="C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\powershell.exe -NoLogo -NoProfile -NonInteractive -WindowStyle Hidden -Command \"Start-Process powershell.exe -Verb Runas -ArgumentList @('-NoExit','-NoProfile','-Command','\"\"Push-Location -literalPath ''%V''\"\"')\""
+
+; Background
+[HKEY_CLASSES_ROOT\Directory\Background\shell\cmd]
+"Icon"="cmd.exe"
+
+[HKEY_CLASSES_ROOT\Directory\Background\shell\runas]
+@="Open command window here (Administrator)"
+"Extended"=""
+"HasLUAShield"=""
+"NoWorkingDirectory"=""
+"Icon"="cmd.exe"
+
+[HKEY_CLASSES_ROOT\Directory\Background\shell\runas\command]
+@="cmd.exe /s /k pushd \"%V\""
+
+[HKEY_CLASSES_ROOT\Directory\Background\shell\wpsh]
+@="Open PowerShell window here"
+"Extended"=""
+"NoWorkingDirectory"=""
+"Icon"="powershell.exe"
+
+[HKEY_CLASSES_ROOT\Directory\Background\shell\wpsh\command]
+@="C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\powershell.exe -NoExit -NoProfile -Command \"Push-Location -literalPath '%V'\""
+
+[HKEY_CLASSES_ROOT\Directory\Background\shell\wpsh-elev]
+@="Open PowerShell window here (Administrator)"
+"Extended"=""
+"NoWorkingDirectory"=""
+"Icon"="powershell.exe"
+"HasLUAShield"=""
+
+[HKEY_CLASSES_ROOT\Directory\Background\shell\wpsh-elev\command]
+@="C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\powershell.exe -NoLogo -NoProfile -NonInteractive -WindowStyle Hidden -Command \"Start-Process powershell.exe -Verb Runas -ArgumentList @('-NoExit','-NoProfile','-Command','\"\"Push-Location -literalPath ''%V''\"\"')\""
+
+; Drive
+[HKEY_CLASSES_ROOT\Drive\shell\cmd]
+"Icon"="cmd.exe"
+
+[HKEY_CLASSES_ROOT\Drive\shell\runas]
+@="Open command window here (Administrator)"
+"Extended"=""
+"HasLUAShield"=""
+"NoWorkingDirectory"=""
+"Icon"="cmd.exe"
+
+[HKEY_CLASSES_ROOT\Drive\shell\runas\command]
+@="cmd.exe /s /k pushd \"%V\""
+
+[HKEY_CLASSES_ROOT\Drive\shell\wpsh]
+@="Open PowerShell window here"
+"Extended"=""
+"NoWorkingDirectory"=""
+"Icon"="powershell.exe"
+
+[HKEY_CLASSES_ROOT\Drive\shell\wpsh\command]
+@="C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\powershell.exe -NoExit -NoProfile -Command \"Push-Location -literalPath '%V'\""
+
+[HKEY_CLASSES_ROOT\Drive\shell\wpsh-elev]
+@="Open PowerShell window here (Administrator)"
+"Extended"=""
+"NoWorkingDirectory"=""
+"Icon"="powershell.exe"
+"HasLUAShield"=""
+
+[HKEY_CLASSES_ROOT\Drive\shell\wpsh-elev\command]
+@="C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\powershell.exe -NoLogo -NoProfile -NonInteractive -WindowStyle Hidden -Command \"Start-Process powershell.exe -Verb Runas -ArgumentList @('-NoExit','-NoProfile','-Command','\"\"Push-Location -literalPath ''%V''\"\"')\""
+
