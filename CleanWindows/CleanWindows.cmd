@@ -35,7 +35,9 @@ reg add "HKCU\Software\Microsoft\Internet Explorer\LinksBar" /V Enabled /T REG_D
 echo. & echo [+] Set Power Plan to 'High Performance'
 for /F "tokens=4" %%i in ('powercfg -l^|find "High"') do @set guid=%%i
 powercfg -setactive %guid%
-:: TODO: also set timeout for turning screen off to 'never'
+:: TODO: Also set timeout for turning screen off to 'never'
+:: TODO: Also disable sleep when closing the lid
+:: HKLM\SYSTEM\CurrentControlSet\Control\Power\User\PowerSchemes\01310eea-960f-4981-8221-0396355ea271\4f971e89-eebd-4455-a8de-9e59040e7347\5ca83367-6e45-459f-a27b-476b1d01c936 -> set ACSettingIndex and DCSettingIndex to 0
 echo. & echo [+] Set cmd.exe screenbuffer height to maximum
 reg add HKCU\Console\^%SystemRoot^%_system32_cmd.exe /V ScreenBufferSize /T REG_DWORD /D 0x7FFFFFFF /F
 echo. & echo [+] Set paint view window to 1x1 pixel
@@ -47,7 +49,7 @@ echo. & echo [+] Set timezone to Amsterdam
 tzutil /s "W. Europe Standard Time"
 
 echo. & echo.
-echo -=[ Windows 10 ]=-
+echo -=[ Windows 10 (all versions) ]=-
 echo. & echo.
 pause
 echo [+] Disable automatic crap apps install
@@ -75,8 +77,16 @@ echo. & echo [+] Hide touch keyboard from system tray
 reg add HKCU\SOFTWARE\Microsoft\TabletTip\1.7 /V TipbandDesiredVisibility /T REG_DWORD /D 0x0 /F
 echo. & echo [+] Hide Windows Ink Workspace from system tray
 reg add HKCU\Software\Microsoft\Windows\CurrentVersion\PenWorkspace /V PenWorkspaceButtonDesiredVisibility /T REG_DWORD /D 0x0 /F
+echo. & echo.
 
-
+echo -=[ Windows 10 RS5 (build 1809) ]=-
+echo. & echo.
+pause
+echo. & echo [+] Enable Clipboard History
+reg add "HKCU\Software\Microsoft\Clipboard" /V ShellHotKeyUsed /T REG_DWORD /D 0x1 /F
+reg add "HKCU\Software\Microsoft\Clipboard" /V EnableClipboardHistory /T REG_DWORD /D 0x1 /F
+reg add "HKCU\Software\Microsoft\Clipboard" /V PastedFromClipboardUI /T REG_DWORD /D 0x1 /F
+reg add "HKCU\Software\Microsoft\Clipboard" /V ClipboardTipRequired /T REG_DWORD /D 0x0 /F
 
 
 :: TODO, Windows Explorer settings:
@@ -88,7 +98,7 @@ reg add HKCU\Software\Microsoft\Windows\CurrentVersion\PenWorkspace /V PenWorksp
 :: powershell.exe -Command "Get-AppxPackage -AllUsers | ? { $_.Name -notlike 'Microsoft.*' -and $_.Name -notlike 'Windows.*' -and $_.InstallLocation -notlike 'C:\Windows\SystemApps\*' } | Remove-AppxPackage"
 
 echo.
-echo -=[ Windows 10 - Clear start menu ]=-
+echo -=[ Windows 10 - Clear start menu (beta) ]=-
 echo. & echo.
 pause
 echo. & echo [+] Cleaning Start menu
