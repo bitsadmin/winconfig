@@ -7,9 +7,12 @@ And the following options to the extended context menu:
 * HexEditor (Administrator)
 * Notepad (Administrator)
 
-Prerequisites:
-* Place HxD [1] into ```%ProgramFiles(x86)%\HxD```
-* Optionally install Notepad2-Mod [2] to have a proper Notepad
+## Screenshot
+![HexEditor and Notepad in extended context menu](contextmenu.png)
+
+## Prerequisites
+* Install HxD [1] into ```%ProgramFiles%\HxD```
+* Optionally install Notepad2-Mod [2] to have a proper Notepad application
 
 
 [1] https://mh-nexus.de/en/hxd/  
