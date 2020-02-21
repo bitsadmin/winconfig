@@ -79,7 +79,7 @@ echo. & echo [+] Hide Windows Ink Workspace from system tray
 reg add HKCU\Software\Microsoft\Windows\CurrentVersion\PenWorkspace /V PenWorkspaceButtonDesiredVisibility /T REG_DWORD /D 0x0 /F
 echo. & echo.
 
-echo -=[ Windows 10 RS5 (build 1809) ]=-
+echo -=[ Windows 10 18H2 (RS5) (build 1809) ]=-
 echo. & echo.
 pause
 echo. & echo [+] Enable Clipboard History
@@ -87,6 +87,13 @@ reg add "HKCU\Software\Microsoft\Clipboard" /V ShellHotKeyUsed /T REG_DWORD /D 0
 reg add "HKCU\Software\Microsoft\Clipboard" /V EnableClipboardHistory /T REG_DWORD /D 0x1 /F
 reg add "HKCU\Software\Microsoft\Clipboard" /V PastedFromClipboardUI /T REG_DWORD /D 0x1 /F
 reg add "HKCU\Software\Microsoft\Clipboard" /V ClipboardTipRequired /T REG_DWORD /D 0x0 /F
+
+
+echo -=[ Windows 10 19H2 (build 1909) ]=-
+echo. & echo.
+pause
+echo. & echo [+] Hide Cortana button on task bar
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /V ShowCortanaButton /T REG_DWORD /D 0x0 /F
 
 
 :: TODO, Windows Explorer settings:
