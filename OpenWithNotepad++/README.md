@@ -6,9 +6,11 @@ If you like me prefer to keep your context menu clean from DLL extensions, and u
 
 ## Screenshots
 **Notepad++ in extended context menu**
+
 ![Notepad++ in extended context menu](contextmenu.png)
 
 **Notepad++ in extended context menu together with Notepad and HexEditor**
+
 ![Notepad++ in extended context menu together with Notepad and HexEditor](contextmenu_full.png)
 
 ## Prerequisite
